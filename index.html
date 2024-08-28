@@ -63,7 +63,7 @@
         function showStatusMessage() {
             let message = "";
             if (temperature < 0) {
-                message = "電風扇凍壞了，請使用轉帳斗內我 806元大銀行 帳號:20182740280076 以換取一台新的電風扇";
+                message = "電風扇凍壞了，無法恢復（好啦其實可以啦）";
             } else if (temperature < 20) {
                 message = "您的溫度快把電風扇凍壞了，電風扇以超低速運轉(拜託升高溫度)";
             } else if (temperature < 40) {
@@ -73,7 +73,7 @@
             } else if (temperature <= 100) {
                 message = "您的溫度太高了，電風扇會燒壞的";
             } else {
-                message = "電風扇燒壞了，請使用轉帳斗內我 806元大銀行 帳號:20182740280076 以換取一台新的電風扇";
+                message = "電風扇燒壞了，無法恢復（好啦其實可以啦）";
             }
             alert(`電風扇狀態：${fanStatus}\n電風扇風速：${fanSpeed}\n\n${message}`);
         }
@@ -89,9 +89,7 @@
         function showDonateOptions() {
             const donateOptions = `
                 <div>
-                    <h3>請使用轉帳斗內我：</h3>
-                    <p>806元大銀行</p>
-                    <p>帳號: 20182740280076</p>
+                    <h3>不要抖內我</h3>
                 </div>
             `;
             const newWindow = window.open("", "斗內", "width=300,height=300");
